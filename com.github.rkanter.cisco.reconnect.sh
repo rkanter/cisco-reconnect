@@ -16,8 +16,8 @@ tell application "System Events"
 				end if
 			end tell
 			
-			-- In case it's in our way, let's shove it to the back
-			set frontmost to false
+			-- In case it's in our way, let's hide it because there's no need to look at it
+			set visible to false
 		end tell
 	end if
 end tell
