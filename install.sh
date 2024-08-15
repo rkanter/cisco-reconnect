@@ -24,4 +24,6 @@ plutil -convert xml1 ~/Library/LaunchAgents/com.github.rkanter.cisco.reconnect.p
 # Load the plist
 launchctl load ~/Library/LaunchAgents/com.github.rkanter.cisco.reconnect.plist
 
+echo "IMPORTANT: Make sure to allow 'osascript' to control your computer in 'Accessibility' - see the README for details"
+
 echo "Done!"
