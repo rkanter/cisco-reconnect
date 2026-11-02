@@ -21,6 +21,9 @@ StandardErrorPath "$HOME/Library/Logs/cisco-reconnect/stderr.log"
 # The defaults commands above will convert the file to a binary format, which makes things more difficult if you want to look at it or edit it manually, so let's convert it back to plain XML
 plutil -convert xml1 ~/Library/LaunchAgents/com.github.rkanter.cisco.reconnect.plist
 
+# Newer MacOS versions tag the plist with a quarantine flag (via defaults write), which makes launchctl fail with "Input/output error"
+xattr -d com.apple.quarantine ~/Library/LaunchAgents/com.github.rkanter.cisco.reconnect.plist > /dev/null 2>&1
+
 # Load the plist
 launchctl load ~/Library/LaunchAgents/com.github.rkanter.cisco.reconnect.plist
 
