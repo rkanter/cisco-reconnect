@@ -35,6 +35,15 @@ disconnected from the VPN while this is running unless you actually quit Cisco S
 `osascript` is the shell to run Applescripts (see [here](https://ss64.com/mac/osascript.html)
 for more details), hence why it needs to be allowed in the System Preferences.
 
+## Pausing
+
+To use Cisco Secure Client without it reconnecting (or being hidden), run `pause.sh`.  Run
+`resume.sh` to re-enable auto-reconnect.
+
+A common reason to pause is switching the tunnel to `TUNNELALL`: you need to disconnect and
+reconnect with the new setting, and without pausing the agent would immediately reconnect (and hide
+the client window) before you can make the change.
+
 ## Troubleshooting
 
 If it doesn't seem to be working, try checking the logs at 
